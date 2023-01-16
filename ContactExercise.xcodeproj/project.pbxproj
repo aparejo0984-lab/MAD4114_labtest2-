@@ -17,6 +17,7 @@
 		129A5BE7296DA36F006F8AFB /* ContactExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A5BE6296DA36F006F8AFB /* ContactExerciseTests.swift */; };
 		129A5BF1296DA36F006F8AFB /* ContactExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A5BF0296DA36F006F8AFB /* ContactExerciseUITests.swift */; };
 		129A5BF3296DA36F006F8AFB /* ContactExerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A5BF2296DA36F006F8AFB /* ContactExerciseUITestsLaunchTests.swift */; };
+		129A5C08296DBCB6006F8AFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A5C07296DBCB6006F8AFB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		129A5BEC296DA36F006F8AFB /* ContactExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		129A5BF0296DA36F006F8AFB /* ContactExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExerciseUITests.swift; sourceTree = "<group>"; };
 		129A5BF2296DA36F006F8AFB /* ContactExerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		129A5C07296DBCB6006F8AFB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				129A5BCC296DA36E006F8AFB /* AppDelegate.swift */,
 				129A5BCE296DA36E006F8AFB /* SceneDelegate.swift */,
 				129A5BD0296DA36E006F8AFB /* ViewController.swift */,
+				129A5C07296DBCB6006F8AFB /* LoginViewController.swift */,
 				129A5BD2296DA36E006F8AFB /* Main.storyboard */,
 				129A5BD8296DA36F006F8AFB /* Assets.xcassets */,
 				129A5BDA296DA36F006F8AFB /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				129A5BD7296DA36E006F8AFB /* ContactExercise.xcdatamodeld in Sources */,
 				129A5BD1296DA36E006F8AFB /* ViewController.swift in Sources */,
 				129A5BCD296DA36E006F8AFB /* AppDelegate.swift in Sources */,
+				129A5C08296DBCB6006F8AFB /* LoginViewController.swift in Sources */,
 				129A5BCF296DA36E006F8AFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
