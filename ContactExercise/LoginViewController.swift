@@ -10,39 +10,22 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var status: UILabel!
     
-    @IBAction func register(_ sender: Any) {
-        
-        let entityDescription =
-            NSEntityDescription.entity(forEntityName: "Login",
-                                       in: managedObjectContext)
-
-        let login = Login(entity: entityDescription!,
-            insertInto: managedObjectContext)
-
-        login.username = username.text!
-        login.password = password.text!
-
-        do {
-            try managedObjectContext.save()
-            username.text = ""
-            password.text = ""
-            status.text = "Successfully Register!"
-
-        } catch let error {
-            status.text = error.localizedDescription
-        }
+    private var profileView: UserProfileViewController!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     @IBAction func login(_ sender: Any) {
         
         let entityDescription =
-                NSEntityDescription.entity(forEntityName: "Login",
+                NSEntityDescription.entity(forEntityName: "Contacts",
                                            in: managedObjectContext)
 
             let request: NSFetchRequest<Login> = Login.fetchRequest()
             request.entity = entityDescription
 
-            let pred = NSPredicate(format: "(username = %@)", username.text!)
+            let pred = NSPredicate(format: "(email = %@)", username.text!)
             request.predicate = pred
 
             do {
@@ -55,16 +38,28 @@ class LoginViewController: UIViewController {
                     let loginpass = match.value(forKey: "password") as? String
                     
                     if ( loginpass! == password.text) {
-                        status.text = "Login sucessfully!!"
+                        profileView = storyboard?.instantiateViewController(withIdentifier: "userProfileID") as? UserProfileViewController
+                        profileView.modalPresentationStyle = .fullScreen
+                        profileView.cfname = (match.value(forKey: "firstname") as? String)!
+                        profileView.clname = (match.value(forKey: "lastname") as? String)!
+                        profileView.cID = (match.value(forKey: "contactID") as? String)!
+                        profileView.cemail = (match.value(forKey: "email") as? String)!
+                        profileView.caddress = (match.value(forKey: "address") as? String)!
+                        profileView.cimage = (match.value(forKey: "image") as? String)!
+                        
+                        self.present(profileView, animated: true, completion: nil)
                     } else {
+                        status.textColor = .red
                         status.text = "Incorrect password"
                     }
                     
                 } else {
+                    status.textColor = .red
                     status.text = "No Match found"
                 }
 
             } catch let error {
+                status.textColor = .red
                  status.text = error.localizedDescription
             }
     }

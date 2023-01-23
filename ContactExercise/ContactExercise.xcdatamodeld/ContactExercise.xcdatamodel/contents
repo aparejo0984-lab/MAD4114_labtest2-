@@ -2,8 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contacts" representedClassName=".Contacts" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="contactID" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Login" representedClassName="Login" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String"/>
