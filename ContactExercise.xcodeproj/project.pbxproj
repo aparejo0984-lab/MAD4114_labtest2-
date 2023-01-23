@@ -21,6 +21,7 @@
 		129B0AC9297ED87000DF2702 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B0AC8297ED87000DF2702 /* UserProfileViewController.swift */; };
 		129B0ACB297EDF6C00DF2702 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B0ACA297EDF6C00DF2702 /* MapViewController.swift */; };
 		129B0ACD297EE3AD00DF2702 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 129B0ACC297EE3AD00DF2702 /* audio.mp3 */; };
+		129B0ACF297EEB1300DF2702 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B0ACE297EEB1300DF2702 /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		129B0AC8297ED87000DF2702 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		129B0ACA297EDF6C00DF2702 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		129B0ACC297EE3AD00DF2702 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		129B0ACE297EEB1300DF2702 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				129A5BCE296DA36E006F8AFB /* SceneDelegate.swift */,
 				129A5BD0296DA36E006F8AFB /* ViewController.swift */,
 				129A5C07296DBCB6006F8AFB /* LoginViewController.swift */,
+				129B0ACE297EEB1300DF2702 /* UsersTableViewController.swift */,
 				129B0AC8297ED87000DF2702 /* UserProfileViewController.swift */,
 				129B0ACA297EDF6C00DF2702 /* MapViewController.swift */,
 				129A5BD2296DA36E006F8AFB /* Main.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				129A5BD7296DA36E006F8AFB /* ContactExercise.xcdatamodeld in Sources */,
 				129B0AC9297ED87000DF2702 /* UserProfileViewController.swift in Sources */,
+				129B0ACF297EEB1300DF2702 /* UsersTableViewController.swift in Sources */,
 				129A5BD1296DA36E006F8AFB /* ViewController.swift in Sources */,
 				129A5BCD296DA36E006F8AFB /* AppDelegate.swift in Sources */,
 				129A5C08296DBCB6006F8AFB /* LoginViewController.swift in Sources */,

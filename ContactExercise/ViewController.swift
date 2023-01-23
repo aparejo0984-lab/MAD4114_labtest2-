@@ -7,6 +7,8 @@ class ViewController: UIViewController {
     let managedObjectContext = (UIApplication.shared.delegate
                 as! AppDelegate).persistentContainer.viewContext
     
+    private var usersListView: UsersTableViewController!
+    
     @IBOutlet weak var contactID: UITextField!
     @IBOutlet weak var firstname: UITextField!
     @IBOutlet weak var lastname: UITextField!
@@ -53,5 +55,36 @@ class ViewController: UIViewController {
         } catch let error {
             status.text = error.localizedDescription
         }
+    }
+    
+    
+    @IBAction func listOfUsers(_ sender: Any) {
+        usersListView = storyboard?.instantiateViewController(withIdentifier: "tableVIewID") as? UsersTableViewController
+        usersListView.modalPresentationStyle = .fullScreen
+        var cnt = 1;
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contacts")
+                request.returnsObjectsAsFaults = false
+                do {
+                    let result = try managedObjectContext.fetch(request)
+                    for data in result as! [NSManagedObject] {
+                        
+                        if (cnt == 1) {
+                            usersListView.cemail1 = data.value(forKey: "email") as! String
+                        } else if (cnt == 2) {
+                            usersListView.cemail2 = data.value(forKey: "email") as! String
+                        }
+                        else {
+                            usersListView.cemail3 = data.value(forKey: "email") as! String
+                        }
+                       print(data.value(forKey: "email") as! String)
+                       cnt = cnt + 1;
+                  }
+                    
+                } catch {
+                    
+                    print("Failed")
+                }
+        
+        self.present(usersListView, animated: true, completion: nil)
     }
 }
